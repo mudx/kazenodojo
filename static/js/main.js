@@ -15,10 +15,10 @@ $(function () {
         var scroll = $(window).scrollTop();
         if (scroll < 20) {
             $(".navbar-area").removeClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "static/assets/images/iogkf/logo1.png");
+            $(".navbar .navbar-brand img").attr("src", "assets/images/iogkf/logo1.png");
         } else {
             $(".navbar-area").addClass("sticky");
-            $(".navbar .navbar-brand img").attr("src", "static/assets/images/iogkf/kazenodojo1.png");
+            $(".navbar .navbar-brand img").attr("src", "assets/images/iogkf/kazenodojo1.png");
         }
     });
 
