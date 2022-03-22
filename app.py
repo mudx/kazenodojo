@@ -3,8 +3,10 @@ from jinja2 import TemplateNotFound
 from flask_bootstrap import Bootstrap
 from flask_mail import Mail, Message
 import dojoconf
-#from common.mail import *
+from mail import *
 
+
+# IMPORTATE LEER ANTES DE HACER UN COMMIT A ESTE ARCHIVO... ES NECESARIO QUITAR EL PUERTO al final de la linea..
 
 app = Flask(__name__)
 
@@ -49,14 +51,14 @@ def index(path):
 def send_message():
     if request.method == "POST":
         suscriptor = request.form['suscriptor']
-        #print(suscriptor)
-        # send_mail(subject="prueba",
-        #           sender="elopez.perto@gmail.com",
-        #           recipients=suscriptor,
-        #           html_body=render_template('reminder.html'),
-        #           text_body="saludos",
-        #           cc=None,
-        #           bcc=None)
+        print(suscriptor)
+        send_mail(subject="prueba",
+                  sender="elopez.perto@gmail.com",
+                  recipients=suscriptor,
+                  html_body=render_template('reminder.html'),
+                  text_body="saludos",
+                  cc=None,
+                  bcc=None)
     return render_template('gracias.html')
 
 
